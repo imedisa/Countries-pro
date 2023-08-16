@@ -1,15 +1,12 @@
 <template>
-  <div class= "text-blue-400">
-    Hello Amin Sehati
-  </div>
 </template>
 
 <script>
-
 export default {
 
 }
 </script>
 
 <style>
+
 </style>
