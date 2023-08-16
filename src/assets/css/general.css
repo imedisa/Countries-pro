@@ -1,0 +1,12 @@
+html {
+    font-size: 14px;
+  }
+  * {
+    font-family: 'Maven Pro', sans-serif;
+  }
+  body {
+    background: #fafafa;
+    color: #030712;
+    font-size: 1rem;
+    font-weight: 400;
+  }

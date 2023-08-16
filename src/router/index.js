@@ -1,15 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import layout from '../layout/MainLayOut.vue'
+import VueRouter from 'vue-router'
+import mainlayout from '../layout/MainLayOut.vue'
 import homepage from '../pages/FirstPage.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+const router = new VueRouter({
+
+  mode:'history',
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'main',
       meta :{
-        layout : layout
+        layout : mainlayout
       },
       component: homepage
     },
