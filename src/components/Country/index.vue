@@ -6,11 +6,11 @@
     <div
       class="bg-header-dark rounded-b items-center md:text-left px-3 py-6 md:px-5 flex-col"
     >
-      <div class="font-bold text-center md:text-left text-sm md:text-md">
+      <div class="font-bold text-center lg:text-left text-sm md:text-md">
         {{ country_info.countryName }}
       </div>
       <div
-        class="flex mt-2 flex-row text-xs md:text-sm justify-center md:justify-start"
+        class="flex mt-2 flex-row text-xs lg:text-sm justify-center lg:justify-start"
       >
         <div class="font-semibold text-primary-dark">population:</div>
         <div class="text-secondary-dark">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div
-        class="flex mt-2 flex-row text-xs md:text-sm justify-center md:justify-start"
+        class="flex mt-2 flex-row text-xs lg:text-sm justify-center lg:justify-start"
       >
         <div class="font-semibold text-primary-dark">Region:</div>
         <div class="text-secondary-dark">
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div
-        class="flex mt-2 flex-row text-xs md:text-sm justify-center md:justify-start"
+        class="flex mt-2 flex-row text-xs lg:text-sm justify-center lg:justify-start"
       >
         <div class="font-semibold text-primary-dark">Capital:</div>
         <div class="text-secondary-dark">

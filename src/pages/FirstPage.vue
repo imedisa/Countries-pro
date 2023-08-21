@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 py-4">
+  <div class=" px-20 xl:px-40 lg:px-28 py-4">
     <div
       class="mt-5 md:mt-8 flex flex-col md:flex-row md:justify-between items-center"
     >
@@ -33,8 +33,8 @@
       </div>
     </div>
     <!-- CONTENT -->
-    <div class="grid sm:grid-cols-4 grid-cols-2 gap-x-6 gap-y-3 mt-8">
-      <div v-for="item in items" :key="item.id">
+    <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-x-6 gap-y-12 mt-10">
+      <div  v-for="item in items" :key="item.id">
         <Country :country_info="item" />
       </div>
     </div>

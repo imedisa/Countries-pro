@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="flex justify-between items-center bg-header-dark font-semibold text-xl shadow px-10 py-4">
+    <header class="flex justify-between items-center bg-header-dark font-semibold text-sm sm:text-lg md:text-xl xl:px-40 lg:px-28 shadow px-20 py-4">
       <div >Where in the world?</div>
       <div>
         <label class="switch scale-75">
