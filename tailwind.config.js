@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
         light: "#fafafa",
         "dark": "#1f2937",
+        "main-dark":'#2d3542',
         "header-dark":"#374151",
        
         "white": "#fff",

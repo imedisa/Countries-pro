@@ -1,10 +1,10 @@
 <template>
   <div>
-    <header class="flex justify-between items-center bg-header-dark font-semibold text-sm sm:text-lg md:text-xl xl:px-40 lg:px-28 shadow px-20 py-4">
+    <header class="flex justify-between items-center z-100 dark:border dark:bg-gray-50 dark:text-dark bg-header-dark font-bold text-sm md:text-md lg:text-xl shadow-lg  px-20 xl:px-40 lg:px-28 py-4">
       <div >Where in the world?</div>
       <div>
-        <label class="switch scale-75">
-            <input type="checkbox"/>
+        <label class="switch  scale-75">
+            <input  @click="toggleDark()" type="checkbox"/>
           <span class="slider"></span>
         </label>
       </div>
@@ -13,8 +13,10 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { useDark, useToggle } from '@vueuse/core';
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 </script>
 
 <style></style>

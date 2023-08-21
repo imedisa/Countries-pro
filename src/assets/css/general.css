@@ -5,7 +5,6 @@ html {
   font-family: "Maven Pro", sans-serif;
 }
 body {
-  background: #2d3542;
   color: #fff;
   font-size: 1rem;
   font-weight: 400;
@@ -17,6 +16,7 @@ body {
   display: inline-block;
   width: 3.5em;
   height: 2em;
+  
 }
 
 /* Hide default HTML checkbox */
