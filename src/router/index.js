@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 import mainlayout from '../layout/MainLayOut.vue'
 import homepage from '../pages/FirstPage.vue'
-
+import selectpage from '../pages/FirstPage.vue'
 const router = new VueRouter({
 
   mode:'history',
@@ -13,6 +13,14 @@ const router = new VueRouter({
         layout : mainlayout
       },
       component: homepage
+    },
+    {
+      path: '/selectcountry',
+      name: 'select',
+      meta :{
+        layout : mainlayout
+      },
+      component: selectpage
     },
     
   ]

@@ -42,7 +42,8 @@
         </div>
       </div>
     </div>
-  </body>
+    
+</body>
 </template>
 
 <script>
