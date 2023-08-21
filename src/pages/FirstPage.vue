@@ -1,5 +1,5 @@
 <template>
-  <body class="bg-main-dark dark:bg-light h-full">
+  <body class="bg-main-dark dark:bg-gray-100 h-full">
     <div class="px-20 xl:px-40 lg:px-28 py-4">
       <div
         class="mt-5 md:mt-8 flex flex-col md:flex-row md:justify-between items-center"

@@ -32,7 +32,7 @@
       >
         <div class="font-semibold text-primary-dark dark:text-dark">Capital:</div>
         <div class="text-zinc-400 font-medium">
-          {{ country_info.capital}}
+          {{ country_info.capital }}
         </div>
       </div>
     </div>
