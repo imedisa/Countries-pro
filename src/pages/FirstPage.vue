@@ -33,28 +33,95 @@
       </div>
     </div>
     <!-- CONTENT -->
-    <div class="flex flex-col mt-8">
-      <div class="text-center gap-x-3 grid grid-cols-2 sm:grid-cols-4 flex-row">
-        <div class="">divvv</div>
-        <div class="">divvv</div>
-        <div class="">divvv</div>
-        <div class="">divvv</div>
-      </div>
-
-      <div
-        class="text-center justify-between gap-x-3 grid grid-cols-2 sm:grid-cols-4 flex-row"
-      >
-        <div class="">divvv</div>
-        <div class="">divvv</div>
-        <div class="">divvv</div>
-        <div class="">divvv</div>
+    <div class="grid sm:grid-cols-4 grid-cols-2 gap-x-6 gap-y-3 mt-8">
+      <div v-for="item in items" :key="item.id">
+        <Country :country_info="item" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
-</script>
+import Country from "@/components/Country/index.vue";
+import axios from 'axios'
+export default {
+  components: {
+    Country,
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 2,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 3,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 4,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 5,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 6,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 7,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+        {
+          id: 8,
+          countryName: "United State",
+          population: 120000000,
+          region: "American",
+          capital: "Washington",
+        },
+      ],
+    };
+  },
+  mounted() {
+    this.getCountries();
+  },
+  methods: {
+    async getCountries() {
+      try {
+        console.log("s");
+        const httpResponse = await axios.get('https://jsonplaceholder.typicode.com/todos');
+        console.log(httpResponse)
 
-<style></style>
+      } catch (error) {}
+    },
+  },
+};
+</script>
