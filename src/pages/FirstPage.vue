@@ -1,5 +1,5 @@
 <template>
-  <body class="bg-main-dark dark:bg-gray-100 h-full">
+  <div class="bg-gray-100 h-screen">
     <div class="px-20 xl:px-40 lg:px-28 py-4">
       <div
         class="mt-5 md:mt-8 flex flex-col md:flex-row md:justify-between items-center"
@@ -17,14 +17,14 @@
           <input
             placeholder="Search For A Country ..."
             type="search"
-            class="text-gray-50 dark:text-dark placeholder:text-secondary-dark rounded md:px-28 px-14 py-3 dark:bg-gray-50 bg-header-dark"
+            class="text-dark placeholder:text-secondary-dark rounded md:px-28 px-14 py-3 bg-gray-50 "
           />
         </div>
         <!-- FILTER -->
 
         <div class="relative">
           <select
-            class="block w-full shadow-md bg-header-dark dark:bg-gray-50 dark:border-gray-50 border border-header-dark dark:text-secondary-dark text-secondary-dark py-3 px-14 md:px-10 mt-4 md:mt-0 rounded focus:outline-none focus:bg-header-dark focus:border-gray-500"
+            class="block w-full shadow-md bg-gray-50 border-gray-50 border   text-secondary-dark py-3 px-14 md:px-10 mt-4 md:mt-0 rounded focus:outline-none focus:bg-header-dark focus:border-gray-500"
             id="grid-state"
           >
             <option>Filter By Region</option>
@@ -43,7 +43,7 @@
       </div>
     </div>
     
-</body>
+</div>
 </template>
 
 <script>
