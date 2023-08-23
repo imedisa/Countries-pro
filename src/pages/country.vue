@@ -8,9 +8,10 @@
           Back
         </button>
       </router-link>
-      <div>
-        <img :src="country_info?.imgUrl" />
+      <div class="flex justify-between mt-14 flex-row items-center ">
+        <img class="h-3/6 w-3/6 object-cover" :src="country_info?.imgUrl" />
       </div>
+
     </div>
   </div>
 </template>
