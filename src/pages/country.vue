@@ -26,13 +26,41 @@
                 {{ country_info?.countryName }}
               </div>
               <!-- CONTENT -->
+              <!-- COL1 -->
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-10"
               >
-                Navite Name : <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.nativeName }}</span>
+                Navite Name: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.nativeName }}</span>
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Population: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.population }}</span>
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Region: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.region }}</span>
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Sub Region: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.subregion }}</span>
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Capital: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.capital }}</span>
+              </div> 
+              <!-- COL2 -->
+            </div>
+            <div class="">
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Capital: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.capital }}</span>
               </div>
             </div>
-            <div class="">frf</div>
           </div>
           <div class="">fdf</div>
         </div>
@@ -51,6 +79,10 @@ export default {
         imgUrl: "",
         countryName: "",
         nativeName: "",
+        population:"",
+        region:"",
+        subregion:"",
+        capital:""
       },
     };
   },
@@ -66,6 +98,10 @@ export default {
             imgUrl: httpResponse.data[0]?.flags?.png,
             countryName: httpResponse.data[0]?.name?.common,
             nativeName: httpResponse.data[0]?.name?.official,
+            population:httpResponse.data[0]?.population,
+            region:httpResponse.data[0]?.region,
+            subregion:httpResponse.data[0]?.subregion,
+            capital:httpResponse.data[0]?.capital[0],
           };
         }
       } catch (error) {
