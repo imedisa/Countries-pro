@@ -11,7 +11,7 @@
       <div
         class="grid sm:grid-cols-12 grid-cols-1 gap-x-8 gap-y-0 sm:gap-y-4 mt-9"
       >
-        <div class="col-span-6 ">
+        <div class="col-span-6">
           <img
             class="h-5/6 lg:h-full w-full object-cover"
             :src="country_info?.imgUrl"
@@ -30,40 +30,78 @@
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-10"
               >
-                Navite Name: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.nativeName }}</span>
+                Navite Name:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.nativeName }}</span
+                >
               </div>
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Population: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.population }}</span>
+                Population:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.population }}</span
+                >
               </div>
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Region: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.region }}</span>
+                Region:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.region }}</span
+                >
               </div>
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Sub Region: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.subregion }}</span>
+                Sub Region:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.subregion }}</span
+                >
               </div>
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Capital: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.capital }}</span>
-              </div> 
-              <!-- COL2 -->
+                Capital:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.capital }}</span
+                >
+              </div>
             </div>
+            <!-- COL2 -->
+
             <div class="">
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Top level domain: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.domain }}</span>
+                Top level domain:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.domain }}</span
+                >
               </div>
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Currencies: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.currrencies }}</span>
+                Currencies:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.currrencies }}</span
+                >
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Language:
+                <span
+                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.language }}</span
+                >
               </div>
             </div>
           </div>
@@ -84,12 +122,13 @@ export default {
         imgUrl: "",
         countryName: "",
         nativeName: "",
-        population:"",
-        region:"",
-        subregion:"",
-        capital:"",
-        domain:"",
-        currrencies:""
+        population: "",
+        region: "",
+        subregion: "",
+        capital: "",
+        domain: "",
+        currrencies: "",
+        language: "",
       },
     };
   },
@@ -105,12 +144,13 @@ export default {
             imgUrl: httpResponse.data[0]?.flags?.png,
             countryName: httpResponse.data[0]?.name?.common,
             nativeName: httpResponse.data[0]?.name?.official,
-            population:httpResponse.data[0]?.population,
-            region:httpResponse.data[0]?.region,
-            subregion:httpResponse.data[0]?.subregion,
-            capital:httpResponse.data[0]?.capital[0],
-            domain:httpResponse.data[0]?.tld[0],
-            currrencies:httpResponse.data[0]?.currencies?.gbp?.name
+            population: httpResponse.data[0]?.population,
+            region: httpResponse.data[0]?.region,
+            subregion: httpResponse.data[0]?.subregion,
+            capital: httpResponse.data[0]?.capital[0],
+            domain: httpResponse.data[0]?.tld[0],
+            currrencies: httpResponse.data[0]?.currencies?.GBP?.name,
+            language: httpResponse.data[0]?.languages          
           };
         }
       } catch (error) {
