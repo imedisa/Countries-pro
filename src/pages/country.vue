@@ -1,17 +1,32 @@
 <template>
   <div class="bg-gray-100 dark:bg-main-dark min-h-screen">
     <div class="px-20 xl:px-40 lg:px-28 py-14">
-      <router-link to="/" class="flex justify-start">
+      <router-link to="/" class="flex justify-center md:justify-start">
         <button
           class="shadow-md border-secondary-dark hover:shadow-black text-header-dark dark:bg-header-dark dark:text-primary-dark bg-gray-50 py-2 rounded px-12 font-medium"
         >
           Back
         </button>
       </router-link>
-      <div class="flex justify-between mt-14 flex-row items-center ">
-        <img class="h-3/6 w-3/6 object-cover" :src="country_info?.imgUrl" />
-      </div>
+      <div
+        class="flex justify-between mt-8 md:mt-14 flex-col md:flex-row items-center"
+      >
+        <div class="">
+          <img
+            class="h-4/6 w-4/6 md:w-3/6 xl:w-2/6 object-cover"
+            :src="country_info?.imgUrl"
+          />
+        </div>
+        <!-- Country Info -->
+        <div class="flex flex-col">
+          <div class="">
+            
+          </div>
+          <div class="">
 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

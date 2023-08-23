@@ -1,13 +1,13 @@
 <template>
   <div>
     <header
-      class=" w-full dark:bg-header-dark flex justify-between items-center z-100 border dark:border-none bg-gray-50 text-dark dark:text-white font-bold text-sm md:text-md lg:text-xl shadow-lg px-20 xl:px-40 lg:px-28 py-4"
+      class=" w-full dark:bg-header-dark flex justify-between items-center z-100 border dark:border-none bg-gray-50 text-dark dark:text-white font-bold text-xs sm:text-md lg:text-xl shadow-lg px-20 xl:px-40 lg:px-28 py-4"
     >
       <router-link to="/">
         Where in the world?
       </router-link>
       <div>
-        <label class="switch scale-75">
+        <label class="switch scale-50 sm:scale-75">
           <input  @click="toggleDark()" type="checkbox" />
           <span class="slider"></span>
         </label>
