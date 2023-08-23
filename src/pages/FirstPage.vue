@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-100 h-screen">
+  <div class="bg-gray-100 dark:bg-main-dark ">
     <div class="px-20 xl:px-40 lg:px-28 py-4">
       <div
-        class="mt-5 md:mt-8 flex flex-col md:flex-row md:justify-between items-center"
+        class= "z-0 mt-5 md:mt-8 flex flex-col md:flex-row md:justify-between items-center"
       >
         <!-- SEARCH -->
         <div class="shadow-md rounded relative flex items-center">
@@ -17,14 +17,14 @@
           <input
             placeholder="Search For A Country ..."
             type="search"
-            class="text-dark placeholder:text-secondary-dark rounded md:px-28 px-14 py-3 bg-gray-50 "
+            class="text-dark dark:text-primary-dark placeholder:text-secondary-dark rounded md:px-28 px-14 py-3 dark:bg-header-dark bg-gray-50 "
           />
         </div>
         <!-- FILTER -->
 
         <div class="relative">
           <select
-            class="block w-full shadow-md bg-gray-50 border-gray-50 border   text-secondary-dark py-3 px-14 md:px-10 mt-4 md:mt-0 rounded focus:outline-none focus:bg-header-dark focus:border-gray-500"
+            class="block w-full shadow-md dark:bg-header-dark bg-gray-50 border-gray-50 border dark:border-header-dark  text-secondary-dark dark:text-primary-dark py-3 px-14 md:px-10 mt-4 md:mt-0 rounded focus:outline-none focus:bg-header-dark focus:border-gray-500"
             id="grid-state"
           >
             <option>Filter By Region</option>

@@ -1,9 +1,11 @@
 <template>
   <div>
     <header
-      class="dark:bg-purple-400 flex justify-between items-center z-100 border bg-gray-50 text-dark font-bold text-sm md:text-md lg:text-xl shadow-lg px-20 xl:px-40 lg:px-28 py-4"
+      class=" w-full dark:bg-header-dark flex justify-between items-center z-100 border dark:border-none bg-gray-50 text-dark dark:text-white font-bold text-sm md:text-md lg:text-xl shadow-lg px-20 xl:px-40 lg:px-28 py-4"
     >
-      <div>Where in the world?</div>
+      <router-link to="/">
+        Where in the world?
+      </router-link>
       <div>
         <label class="switch scale-75">
           <input  @click="toggleDark()" type="checkbox" />
@@ -30,17 +32,13 @@ export default {
         document.documentElement.classList.remove("dark");
         localStorage.setItem('isDark','false');
       }
-      console.log(parseIsDark)
-      console.log(isDark)
     },
   },
   computed: {},
   mounted(){
     const isDark = localStorage && localStorage.getItem("isDark");
-    console.log(typeof isDark)
     const parseIsDark = JSON.parse(isDark);
-    
-    console.log(isDark);
+
     if(!parseIsDark){
       localStorage.setItem('isDark','false');
     }
