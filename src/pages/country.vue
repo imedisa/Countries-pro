@@ -105,7 +105,19 @@
               </div>
             </div>
           </div>
-          <div class="">fdf</div>
+          <div class="">
+            <div>
+              Border Countries :
+              <div class="bg-white text-dark rounded px-3 py-2 shadow-md flex items-center">
+                <div
+                  v-for="(country, index) in country_info.border"
+                  :key="index"
+                >
+                  {{ country }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -129,6 +141,7 @@ export default {
         domain: "",
         currrencies: "",
         language: "",
+        border: [],
       },
     };
   },
@@ -150,7 +163,8 @@ export default {
             capital: httpResponse.data[0]?.capital[0],
             domain: httpResponse.data[0]?.tld[0],
             currrencies: httpResponse.data[0]?.currencies?.GBP?.name,
-            language: httpResponse.data[0]?.languages          
+            // language: httpResponse.data[0]?.languages,
+            border: httpResponse.data[0]?.borders,
           };
         }
       } catch (error) {
