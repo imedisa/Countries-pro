@@ -58,7 +58,12 @@
               <div
                 class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
               >
-                Capital: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.capital }}</span>
+                Top level domain: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.domain }}</span>
+              </div>
+              <div
+                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+              >
+                Currencies: <span class="text-gray-600 font-regular text-sm sm:text-md md:text-xl">{{ country_info?.currrencies }}</span>
               </div>
             </div>
           </div>
@@ -82,7 +87,9 @@ export default {
         population:"",
         region:"",
         subregion:"",
-        capital:""
+        capital:"",
+        domain:"",
+        currrencies:""
       },
     };
   },
@@ -102,6 +109,8 @@ export default {
             region:httpResponse.data[0]?.region,
             subregion:httpResponse.data[0]?.subregion,
             capital:httpResponse.data[0]?.capital[0],
+            domain:httpResponse.data[0]?.tld[0],
+            currrencies:httpResponse.data[0]?.currencies?.gbp?.name
           };
         }
       } catch (error) {
