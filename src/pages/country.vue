@@ -8,25 +8,25 @@
           Back
         </button>
       </router-link>
-      <div
-        class="flex justify-between mt-8 md:mt-14 flex-col md:flex-row items-center"
-      >
-        <div class="">
+      <div class="grid sm:grid-cols-12 grid-cols-1 gap-x-8 gap-y-0 sm:gap-y-4 mt-9">
+        <div class="col-span-6">
           <img
-            class="h-4/6 w-4/6 md:w-3/6 xl:w-2/6 object-cover"
+            class="h-4/6 w-full object-cover"
             :src="country_info?.imgUrl"
           />
         </div>
-        <!-- Country Info -->
-        <div class="flex flex-col">
-          <div class="">
-            
+        <div class="col-span-6">
+          <div class="flex flex-row justify-between w-11/12 mx-auto">
+            <div class="">
+              <!-- TITLE -->
+              <div class="font-bold text-dark md:text-3xl text-sm sm:text-lg">{{ country_info?.countryName }}</div>
+            </div>
+            <div class="">frf</div>
           </div>
-          <div class="">
-
-          </div>
+          <div class="">fdf</div>
         </div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
     return {
       country_info: {
         imgUrl: "",
+        countryName:"",
       },
     };
   },
@@ -51,6 +52,7 @@ export default {
         if (httpResponse.data.length) {
           this.country_info = {
             imgUrl: httpResponse.data[0]?.flags?.png,
+            countryName : httpResponse.data[0]?.name?.common,
           };
         }
       } catch (error) {
