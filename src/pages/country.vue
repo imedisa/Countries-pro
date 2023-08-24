@@ -141,6 +141,7 @@ export default {
         domain: "",
         currrencies: "",
         language: "",
+        //this is an array that i shoud organaise it 
         border: [],
       },
     };
