@@ -106,7 +106,7 @@
             </div>
           </div>
           <div class="">
-            <div>
+            <div class="text-dark">
               Border Countries :
               <div class="bg-white text-dark rounded px-3 py-2 shadow-md flex items-center">
                 <div
