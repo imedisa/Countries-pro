@@ -11,7 +11,7 @@
       <div
         class="grid sm:grid-cols-12 grid-cols-1 gap-x-8 gap-y-0 sm:gap-y-4 mt-9"
       >
-        <div class="col-span-6">
+        <div class="col-span-6 " >
           <img
             class="h-5/6 lg:h-full w-full object-cover"
             :src="country_info?.imgUrl"
@@ -19,7 +19,7 @@
           />
         </div>
         <div class="col-span-6 ">
-          <div class="flex flex-row justify-between w-11/12 mx-auto">
+          <div class="flex flex-row items-center justify-between w-11/12 mx-auto">
             <div class="">
               <!-- TITLE -->
               <div class="font-bold dark:text-white text-black md:text-3xl text-sm sm:text-lg">
