@@ -32,7 +32,7 @@
               >
                 Navite Name:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.nativeName }}</span
                 >
               </div>
@@ -41,7 +41,7 @@
               >
                 Population:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.population }}</span
                 >
               </div>
@@ -50,7 +50,7 @@
               >
                 Region:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.region }}</span
                 >
               </div>
@@ -59,7 +59,7 @@
               >
                 Sub Region:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.subregion }}</span
                 >
               </div>
@@ -68,7 +68,7 @@
               >
                 Capital:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 font-regular dark:text-secondary-dark text-sm sm:text-md md:text-xl"
                   >{{ country_info?.capital }}</span
                 >
               </div>
@@ -81,7 +81,7 @@
               >
                 Top level domain:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.domain }}</span
                 >
               </div>
@@ -90,8 +90,8 @@
               >
                 Currencies:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
-                  >{{ country_info?.currrencies }}</span
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
+                  >{{ country_info?.currencies }}</span
                 >
               </div>
               <div
@@ -99,20 +99,20 @@
               >
                 Language:
                 <span
-                  class="text-gray-600 font-regular text-sm sm:text-md md:text-xl"
+                  class="text-gray-600 dark:text-secondary-dark font-regular text-sm sm:text-md md:text-xl"
                   >{{ country_info?.language }}</span
                 >
               </div>
             </div>
           </div>
           <div class="">
-            <div class="font-medium text-sm sm:text-md md:text-xl items-center w-11/12  text-dark mt-2 mx-auto flex flex-row flex-wrap">
+            <div class="font-medium dark:text-primary-dark text-sm sm:text-md md:text-xl items-center w-11/12  text-dark mt-2 mx-auto flex flex-row flex-wrap">
               Border Countries :
               <div class=" flex items-center gap-y-2 flex-wrap">
                 <div
                   v-for="(country, index) in country_info.border"
                   :key="index"
-                  class="mr-2 text-xs md:text-sm bg-white flex text-gray-600 rounded px-3 dark:bg-header-dark shadow-md"
+                  class="mr-2 text-xs md:text-sm bg-white flex dark:text-secondary-dark text-gray-600 rounded px-3 dark:bg-header-dark shadow-md"
                 >
                   {{ country }}
                 </div>
@@ -140,7 +140,7 @@ export default {
         subregion: "",
         capital: "",
         domain: "",
-        currrencies: "",
+        currencies: "",
         language: "",
         //this is an array that i shoud organaise it 
         border: [],
@@ -164,7 +164,7 @@ export default {
             subregion: httpResponse.data[0]?.subregion,
             capital: httpResponse.data[0]?.capital[0],
             domain: httpResponse.data[0]?.tld[0],
-            currrencies: httpResponse.data[0]?.currencies?.GBP?.name,
+            // currencies: httpResponse.data[0]?.currencies?.ZAR?.name
             // language: httpResponse.data[0]?.languages,
             border: httpResponse.data[0]?.borders,
           };
