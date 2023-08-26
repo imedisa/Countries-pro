@@ -28,7 +28,7 @@
               <!-- CONTENT -->
               <!-- COL1 -->
               <div
-                class="font-medium text-sm sm:text-md md:text-xl  text-dark mt-10"
+                class="font-medium text-sm sm:text-md md:text-xl  dark:text-primary-dark text-dark mt-10"
               >
                 Navite Name:
                 <span
@@ -37,7 +37,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Population:
                 <span
@@ -46,7 +46,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Region:
                 <span
@@ -55,7 +55,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Sub Region:
                 <span
@@ -64,7 +64,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Capital:
                 <span
@@ -77,7 +77,7 @@
 
             <div class="">
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Top level domain:
                 <span
@@ -86,7 +86,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Currencies:
                 <span
@@ -95,7 +95,7 @@
                 >
               </div>
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-2"
+                class="font-medium text-sm sm:text-md md:text-xl dark:text-primary-dark text-dark mt-2"
               >
                 Language:
                 <span
@@ -106,13 +106,13 @@
             </div>
           </div>
           <div class="">
-            <div class="font-medium text-sm sm:text-md md:text-xl items-center w-11/12  text-dark mt-2 mx-auto flex flex-row">
+            <div class="font-medium text-sm sm:text-md md:text-xl items-center w-11/12  text-dark mt-2 mx-auto flex flex-row flex-wrap">
               Border Countries :
-              <div class=" flex items-center">
+              <div class=" flex items-center gap-y-2 flex-wrap">
                 <div
                   v-for="(country, index) in country_info.border"
                   :key="index"
-                  class="mx-2 bg-white text-gray-600 rounded px-3 dark:bg-header-dark shadow-md"
+                  class="mr-2 text-xs md:text-sm bg-white flex text-gray-600 rounded px-3 dark:bg-header-dark shadow-md"
                 >
                   {{ country }}
                 </div>
