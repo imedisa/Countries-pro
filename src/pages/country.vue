@@ -18,17 +18,17 @@
             v-if="country_info?.imgUrl"
           />
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 ">
           <div class="flex flex-row justify-between w-11/12 mx-auto">
             <div class="">
               <!-- TITLE -->
-              <div class="font-bold text-black md:text-3xl text-sm sm:text-lg">
+              <div class="font-bold dark:text-white text-black md:text-3xl text-sm sm:text-lg">
                 {{ country_info?.countryName }}
               </div>
               <!-- CONTENT -->
               <!-- COL1 -->
               <div
-                class="font-medium text-sm sm:text-md md:text-xl text-dark mt-10"
+                class="font-medium text-sm sm:text-md md:text-xl  text-dark mt-10"
               >
                 Navite Name:
                 <span
@@ -106,12 +106,13 @@
             </div>
           </div>
           <div class="">
-            <div class="text-dark">
+            <div class="font-medium text-sm sm:text-md md:text-xl items-center w-11/12  text-dark mt-2 mx-auto flex flex-row">
               Border Countries :
-              <div class="bg-white text-dark rounded px-3 py-2 shadow-md flex items-center">
+              <div class=" flex items-center">
                 <div
                   v-for="(country, index) in country_info.border"
                   :key="index"
+                  class="mx-2 bg-white text-gray-600 rounded px-3 dark:bg-header-dark shadow-md"
                 >
                   {{ country }}
                 </div>
