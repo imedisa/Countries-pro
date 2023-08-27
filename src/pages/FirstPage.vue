@@ -15,6 +15,8 @@
             </g>
           </svg>
           <input
+            v-model="searchText"
+            
             placeholder="Search For A Country ..."
             type="search"
             class="text-dark w-full md:w-auto dark:text-primary-dark placeholder:text-secondary-dark rounded md:px-28 px-14 py-3 dark:bg-header-dark bg-gray-50 "
@@ -56,6 +58,7 @@ export default {
   data() {
     return {
       items: [],
+      value: ''
     };
   },
   mounted() {

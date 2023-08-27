@@ -164,8 +164,8 @@ export default {
             subregion: httpResponse.data[0]?.subregion,
             capital: httpResponse.data[0]?.capital[0],
             domain: httpResponse.data[0]?.tld[0],
-            // currencies: httpResponse.data[0]?.currencies?.ZAR?.name
-            // language: httpResponse.data[0]?.languages,
+            currencies: httpResponse.data[0]?.currencies?.ZAR?.name,
+            // language: httpResponse.data[0]?.afr?.languages,
             border: httpResponse.data[0]?.borders,
           };
         }
